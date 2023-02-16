@@ -27,6 +27,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: install requirements
-      run: apt-get install python3-stdeb fakeroot python-all dh-python
+      run: sudo apt-get install python3-stdeb fakeroot python-all dh-python
     - name: temp
       run: ls -la; pwd
