@@ -29,4 +29,4 @@ jobs:
     - name: install requirements
       run: sudo apt-get install python3-stdeb fakeroot python-all dh-python
     - name: build package
-      run: python3 setup.py sdist; python3 setup.py --command-packages=stdeb.command bdist_deb
+      run: cd petunia/; ls ; python3 setup.py sdist; python3 setup.py --command-packages=stdeb.command bdist_deb
