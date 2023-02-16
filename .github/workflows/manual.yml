@@ -33,4 +33,4 @@ jobs:
     - name: Branch name
       run: echo running on branch ${GITHUB_REF##*/}
     - name: build package
-      run: ls
+      run: python3 setup.py sdist; python3 setup.py --command-packages=stdeb.command bdist_deb
