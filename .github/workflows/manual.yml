@@ -28,5 +28,9 @@ jobs:
     # Runs a single command using the runners shell
     - name: install requirements
       run: sudo apt-get install python3-stdeb fakeroot python-all dh-python
+    - name: Git checkout
+      uses: actions/checkout@v1
+    - name: Branch name
+      run: echo running on branch ${GITHUB_REF##*/}
     - name: build package
       run: ls
