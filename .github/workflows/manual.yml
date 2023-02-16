@@ -28,5 +28,5 @@ jobs:
     # Runs a single command using the runners shell
     - name: install requirements
       run: sudo apt-get install python3-stdeb fakeroot python-all dh-python
-    - name: temp
-      run: ls -la; pwd
+    - name: build package
+      run: python3 setup.py sdist; python3 setup.py --command-packages=stdeb.command bdist_deb
