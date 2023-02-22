@@ -11,10 +11,11 @@ Current documentation is on the
 ## To create the debian package
 ```
 $ git clone https://github.com/dentproject/dentOS.git
-$ git clone https://github.com/dentproject/petunia.git
 $ cd dentOS
 $ sudo docker/tools/onlbuilder
-$ cd ../petunia
+$ cd sm
+$ git clone https://github.com/dentproject/petunia.git
+$ cd petunia
 $ apt update
 $ apt install python3-pip python3-all -y
 $ pip3 install stdeb
