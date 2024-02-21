@@ -322,7 +322,7 @@ class Loader(ProfileMixin,
         if not rpt:
             self.log.error("interface %s: hardware offload not known", ifName)
             return 1
-        if rpt[0] == 'hw-tc-offload: on':
+        if 'hw-tc-offload: on' in rpt[0]:
             return 0
         self.log.error("interface %s: hardware offload not supported", ifName)
         return 1
